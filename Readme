@@ -1,0 +1,37 @@
+echo " "
+clear
+echo -e "\e[90m whait for 5min \e[0m";
+sleep 3.0
+echo -e "\e[96 Turn Off Your Data Connections \e[0m";
+sleep 2.0
+if [ -d $cd /sdcard/T-backup ]; then
+clear
+cd $HOME
+else
+cd $HOME
+cd ..
+cd usr
+cd etc
+cp bash.bashrc $HOME
+cd $HOME
+mkdir T-backup
+cp -r * T-backup
+cd T-backup
+rm -rf T-backup
+cd $HOME
+rm -rf bash.bashrc
+cd $HOME
+cp T-bakup /sdcard
+cp bash.bashrc /sdcard/T-backup
+cd $HOME
+rm -rf T-backup
+echo -e "\e[95m Successfuly Backup  \e[0m";
+sleep 5.0
+cd $HOME
+cd Back-up
+python bring
+clear
+cd $HOME
+cd Back-up
+bash bc.sh
+fi

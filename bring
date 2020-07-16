@@ -1,0 +1,9 @@
+
+import sys
+import time
+from time import sleep
+for i in range(21):
+    sys.stdout.write('\r')
+    sys.stdout.write("[%-21s] %d%%" % ('='*i, 1*i))
+    sys.stdout.flush()
+    sleep(0.5)
